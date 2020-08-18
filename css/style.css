@@ -23,6 +23,23 @@ li{
     color: #fff;
 }
 /* =============================================================== */
+/*                 PRELOADER AND DARK SKIN  SECTION                */
+/* =============================================================== */
+.dark-skin{
+    /* position: fixed;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.8;
+    top: 0px;
+    z-index: 100;
+    background-color: black; */
+}
+.preloader{
+ 
+}
+
+
+/* =============================================================== */
 /*                 BANNER SECTION                              */
 /* =============================================================== */
 .banner{
@@ -71,7 +88,7 @@ img.profile-image{
     margin-top: 25px;
     display: inline-block;
     border: 1px solid rgb(244, 119, 74);
-    background-color: orangered;
+    background-color: rgb(249, 98, 43);
     padding: 0px 30px 10px 30px;
     border-radius: 4px;
     transition: all 0.1s ease;
@@ -176,7 +193,16 @@ img.profile-image{
     z-index: 110;
     padding-bottom: 2px;
     position: fixed;
-    background-color: #333;
+    background-color: #fff;
+    box-shadow: 0px 2px 2px 0px rgba(84, 84, 84, 0.27);
+}
+.navigation.sticky .logo i.fa-bars, .navigation.sticky .link-container ul li a{
+    color: #555;
+}
+@media only screen and (max-width: 767px){
+.navigation.sticky .link-container ul li a{
+    color: #fff;
+}
 }
 .navigation ul{
     width: 100%;
@@ -343,12 +369,12 @@ li.google a{
     border-bottom: 1px solid  rgb(249, 94, 38);
 }
 .view-cv li{
-   background-color: rgb(249, 94, 38);
+   background-color: rgb(255, 120, 70);
    width: 150px;
    border-radius: 4px;
    text-align: center;
    padding: 0px 0px 5px 0px;
-   box-shadow: 2px 2px 3px 2px rgba(135, 135, 135, 0.27);
+   box-shadow: 2px 2px 3px 2px rgba(72, 72, 72, 0.421);
 }
 .view-cv li a, .download-cv li a{
    color: #fff;
@@ -359,15 +385,31 @@ li.google a{
     margin-right: 5px;
   }
  .download-cv li{
-    background-color: rgb(61, 222, 247);
+    background-color: rgb(15, 215, 246);
     width: 150px;
     border-radius: 4px;
     text-align: center;
     padding: 0px 0px 5px 0px;
-    box-shadow: 2px 2px 3px 2px rgba(135, 135, 135, 0.27);
+    box-shadow: 2px 2px 3px 2px rgba(72, 72, 72, 0.421);
  }
  .download-cv li:hover, .view-cv li:hover{
     transform: scale(1.03);
+ }
+ .my-cv-container{
+    width: 60%;
+    margin-left: 20%;
+    padding: 40px;
+ }
+ .my-cv-container img{
+     width: 100%;
+     height: 100%;
+     box-shadow: 2px 2px 3px 2px rgba(72, 72, 72, 0.421);
+ }
+ @media only screen and (max-width: 1125px){
+.my-cv-container{
+    width: 80%;
+    margin-left: 10%;
+    }
  }
  @media only screen and (max-width: 992px){
 .about-container{
@@ -378,6 +420,10 @@ li.google a{
     max-width: 100%;
     padding: 0px 50px;
 }
+.my-cv-container{
+    width: 90%;
+    margin-left: 5%;
+ }
 }
 
 @media only screen and (max-width: 876px){
@@ -404,16 +450,27 @@ li.google a{
     font-size: 120%;
     font-weight: 600;
 }
-.download-cv li, .view-cv li{
-    width: 130px;
-}
-}
-@media only screen and (max-width: 767px){
 .container{
     padding: 0px 20px;
 }
 .about-two{
     padding-top: 50px;
+}
+.download-cv li, .view-cv li{
+    width: 130px;
+}
+.my-cv-container{
+    padding-left: 0px;
+    padding-right: 0px;
+ }
+}
+@media only screen and (max-width: 567px){
+.my-cv-container{
+    width: 100%;
+    margin: 0px;
+    height: 750px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 }
 @media only screen and (max-width: 467px){
@@ -429,10 +486,17 @@ li.google a{
     width: 100%;
     margin-top: 10px;
 }
+.my-cv-container{
+    height: 720px;
 }
-
+}
+@media only screen and (max-width: 398px){
+.my-cv-container{
+    height: 600px;
+}
+}
  /* =============================================================== */
-/*                 SPECIALTY  SECTION                              */
+/*                 SECIALTY  SECTION                              */
 /* =============================================================== */
 .specialty{
    padding-bottom: 50px;
@@ -578,12 +642,12 @@ svg.svg circle.two{
     padding: 20px 0px;
 }
 .Bbutton li, .Rbutton li {
-    background-color: rgb(249, 94, 38);
+    background-color: rgb(249, 108, 56);
     width: 150px;
     border-radius: 4px;
     text-align: center;
     padding: 0px 0px 5px 0px;
-    box-shadow: 2px 2px 3px 2px rgba(135, 135, 135, 0.27);
+    box-shadow: 2px 2px 3px 2px rgba(72, 72, 72, 0.421);
     transition: all 0.1s ease;
  }
  .Bbutton li:hover, .Rbutton li:hover{
@@ -599,12 +663,12 @@ svg.svg circle.two{
      margin-right: 5px;
    }
  .Bbutton li{
-     background-color: rgb(34, 244, 177);
+     background-color: rgb(0, 222, 151);
      width: 150px;
      border-radius: 4px;
      text-align: center;
      padding: 0px 0px 5px 0px;
-     box-shadow: 2px 2px 3px 2px rgba(135, 135, 135, 0.27);
+     box-shadow: 2px 2px 3px 2px rgba(72, 72, 72, 0.421);
   }
 @media only screen and (max-width: 876px){
 .portfolio-container-header{
