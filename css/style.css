@@ -299,7 +299,10 @@ img.profile-image{
 .about-container{
    width: 80%;
    margin-left: 10%;
-   padding: 50px 0px 100px 0px;
+   padding: 50px 0px 80px 0px;
+}
+.about{
+    padding-bottom: 20px;
 }
 .about-header h4{
     color: rgb(249, 94, 38);
@@ -619,7 +622,7 @@ svg.svg circle.two{
     padding: 2px;
 }
 .portfolio-image img{
-    width: 99%;
+    width: 100%;
     height: 100%;
     border: 1px solid rgb(244, 202, 187);
    
@@ -630,7 +633,7 @@ svg.svg circle.two{
 .description-body p, .description-body ul li{
     font-size: 60%;
     padding-left: 20px;
-    color: #555;
+    color: rgb(98, 98, 98);
 }
 .description-body ul li{
     list-style: inside;
@@ -670,7 +673,7 @@ svg.svg circle.two{
      padding: 0px 0px 5px 0px;
      box-shadow: 2px 2px 3px 2px rgba(72, 72, 72, 0.421);
   }
-@media only screen and (max-width: 876px){
+@media only screen and (max-width: 992px){
 .portfolio-container-header{
     padding: 0px 20px;
 }
@@ -691,6 +694,7 @@ svg.svg circle.two{
 .portfolio-image{
     float: none;
     width: 450px;
+    padding-left: 10px;
 }
 }
 @media only screen and (max-width: 467px){

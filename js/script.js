@@ -61,15 +61,38 @@ var swipperContainer = $(".swipper");
 class Swipper{
      constructor(swipper){
         var action = this;
+        this.isDown = false;
+        this.isMoving = false;
+        this.counter = 0;
+        this.change = 0;
+        this.itemsWidth = 0;
+        this.initialPosition = 0;
+        this.numberOfFrames = 0;
+        this.transformMatrixValue = 0;
         this.swipperContainer = $(swipper);
-        this.swipperFrame = $(this.swipperContainer).children();
+        this.swipperFrame = $(this.swipperContainer).find(".portfolio-frame");
         this.swipperItem = $(this.swipperFrame).children();
-        this.responsive()
+        this.responsive() // responsiveness
+        this.get_item();
+        this.swipperFrame.on("touchstart",function(){ 
+            action.touchStart();  // touch start function
+        })
+        this.swipperFrame.on("touchmove", function(){ 
+            action.touchMove();   // touch move function
+        })
+        this.swipperFrame.on("touchend", function(){ 
+            action.touchEnd();   // touch end function
+        });
+        
      }
+
+
+
 
      responsive(){
          var frames = 3
-        if($(this.swipperContainer).width() <= 876){
+       
+         if($(window).width() <= 992){
             frames = 2;
         }
         if($(this.swipperContainer).width() <= 576){
@@ -77,13 +100,96 @@ class Swipper{
         }
 
         var width = Math.round($(this.swipperContainer).width() / frames);
-        $(this.swipperItem).css({
-            width: width+"px"
+
+        if($(window).width() <= 992){
+            $(window).on("resize", function(){
+                $(this.swipperItem).css({
+                    width: width+"px"
+                });
+            });
+            $(this.swipperItem).css({
+                width: width+"px"
+            });
+        }else{
+            $(this.swipperItem).css("width", 33.33+"%");
+        }
+     }  //  end of responsiveness
+  
+
+     get_item(){
+        var paddingLeft = parseInt($(this.swipperItem[0]).css("padding-left"));
+        var paddingRight = parseInt($(this.swipperItem[0]).css("padding-right"));
+       
+        var padding = paddingRight + paddingLeft;
+        console.log(padding)
+        this.itemsWidth = $(this.swipperItem[0]).width() + padding;
+        $(this.swipperFrame).css({
+            "transform": "translateX("+(-this.itemsWidth * this.counter)+"px)"
         });
+        this.numberOfFrames = Math.round($(this.swipperContainer).width()/ this.itemsWidth);
      }
+
+    //  touch start 
+    touchStart(){
+       this.isDown = true;
+       this.initialPosition = event.touches[0].clientX;
+       var transformationMatrix = $(this.swipperFrame).css("transform");
+      if(transformationMatrix != "none"){
+          this.transformMatrixValue = parseInt(transformationMatrix.split(",")[4].trim())
+      }
+      $(this.swipperFrame).css({ transition: "none"});
+    }
+
+     //  touch start 
+     touchMove(){
+       if(this.isDown){
+           var isMoving = event.touches[0].clientX;
+           this.change = isMoving - this.initialPosition;
+
+           $(this.swipperFrame).css({
+               "transform": "translateX("+(this.change + this.transformMatrixValue)+"px)"
+           });
+          this.isMoving = true;
+       }
+    }
+
+     //  touch start 
+     touchEnd(){
+         if(this.isMoving){
+            if(this.change <= (-this.itemsWidth / 3)){
+            this.counter++;
+            }else if(this.change > (this.itemsWidth/3)){
+                this.counter--;
+            }
+            if(this.counter < 0){
+                this.counter = 0;
+            }
+            var number = this.counter + this.numberOfFrames;
+             if(this.counter > (this.swipperItem.length - this.numberOfFrames)){
+               this.counter = this.swipperItem.length - this.numberOfFrames;
+             }
+            
+            $(this.swipperFrame).css({
+                transform: "translateX("+(-this.itemsWidth * this.counter)+"px)",
+                transition: "all 0.3s ease"
+            });
+         }
+       
+        this.isDown = false;
+        this.isMoving = false;
+    }
+
+
+    //  end of swipper class
 }
 
-var swipper = new Swipper(swipperContainer);
+$.each(swipperContainer, function(index, current){
+    var swipper = new Swipper(current);
+});
+   
+       
+    
+
 
 
 
