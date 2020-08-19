@@ -202,6 +202,12 @@ img.profile-image{
 img.profile-image{
     left: 30px;
 }
+.mycv{
+    bottom: -120px;
+}
+.developer p{
+    bottom: -140px;
+}
 }
 
 /* =============================================================== */
