@@ -673,6 +673,9 @@ svg.svg circle.two{
      padding: 0px 0px 5px 0px;
      box-shadow: 2px 2px 3px 2px rgba(72, 72, 72, 0.421);
   }
+  .caurosel{
+      display: none;
+  }
 @media only screen and (max-width: 992px){
 .portfolio-container-header{
     padding: 0px 20px;
@@ -684,7 +687,7 @@ svg.svg circle.two{
     width: 100%;
 }
 .portfolio-container{
-    height: 205px;
+    height: 220px;
     position: relative;
 }
 .portfolio-frame{
@@ -695,6 +698,21 @@ svg.svg circle.two{
     float: none;
     width: 450px;
     padding-left: 10px;
+}
+.caurosel{
+    display: block;
+    position: relative;
+    bottom: -190px;
+    text-align: center;
+    height: 0
+}
+.caurosel i.fa-circle{
+    color: #ccc;
+    font-size: 65%;
+    margin: 0px 3px;
+}
+.caurosel i.fa-circle.active{
+    color: orange;
 }
 }
 @media only screen and (max-width: 467px){

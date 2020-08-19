@@ -71,9 +71,11 @@ class Swipper{
         this.transformMatrixValue = 0;
         this.swipperContainer = $(swipper);
         this.swipperFrame = $(this.swipperContainer).find(".portfolio-frame");
+        this.caurosel = $(this.swipperContainer).find(".caurosel");
         this.swipperItem = $(this.swipperFrame).children();
         this.responsive() // responsiveness
-        this.get_item();
+        this.get_item();// get items width, padding e.t.c
+        this.set_caurosel();
         this.swipperFrame.on("touchstart",function(){ 
             action.touchStart();  // touch start function
         })
@@ -83,7 +85,8 @@ class Swipper{
         this.swipperFrame.on("touchend", function(){ 
             action.touchEnd();   // touch end function
         });
-        
+        this.cauroselBtn();// function that handles caurosel click action;
+    
      }
 
 
@@ -121,12 +124,23 @@ class Swipper{
         var paddingRight = parseInt($(this.swipperItem[0]).css("padding-right"));
        
         var padding = paddingRight + paddingLeft;
-        console.log(padding)
         this.itemsWidth = $(this.swipperItem[0]).width() + padding;
         $(this.swipperFrame).css({
             "transform": "translateX("+(-this.itemsWidth * this.counter)+"px)"
         });
         this.numberOfFrames = Math.round($(this.swipperContainer).width()/ this.itemsWidth);
+     }
+
+    //  append caurosel to the image sliders
+     set_caurosel(){
+         var items = this.swipperItem;
+       
+         $.each(this.caurosel, function(index, current){
+               for(var i = 0; i < items.length; i++){
+                    $(current).append('<i class="fa fa-circle"></i>');
+               }  
+         });
+         $($(this.caurosel).children()[0]).addClass("active");
      }
 
     //  touch start 
@@ -177,6 +191,29 @@ class Swipper{
        
         this.isDown = false;
         this.isMoving = false;
+    }
+
+    // function that handles caurosel click action;
+    cauroselBtn(){
+        var counter = this.counter;
+        var frame = this.swipperFrame;
+        var itemsWidth = this.itemsWidth;
+        $.each(this.caurosel, function(index, current){
+              $.each($(this).children(), function(C_index, C_current){
+                     $(C_current).click(function(){
+                        $(current).children().removeClass("active");
+                        $(this).addClass("active");
+                         counter = C_index;
+                         if(counter < 0){
+                             counter = 0;
+                         }
+                        $(frame).css({
+                            transform: "translateX("+(-itemsWidth * counter)+"px)",
+                            transition: "all 0.3s ease"
+                        });
+                     });
+              });
+        });
     }
 
 
