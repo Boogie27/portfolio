@@ -1,11 +1,59 @@
 $(document).ready(function(){
+
+    var imageCounter = 0;
+   function dynamic_banner(){
+    var bannerImage = $("img.banner-image");
+        for(var i = 0; i < bannerImage.length; i++){
+              $($(bannerImage)[i]).hide();
+        }
+        if(imageCounter > bannerImage.length - 1){
+            imageCounter = 0;
+        }
+        $($(bannerImage)[imageCounter]).fadeIn();
+        imageCounter++;
+        setTimeout(dynamic_banner, 10500);
+   }
+   dynamic_banner();
+// =====================================================
+//    BANNER FADE IN EFFECT
+// =====================================================
+  function displayName (){
+    var myName = $("h1.my-name");
+    $(myName).css({
+         opacity: 1,
+         bottom: "-100px",
+         transition: "all 0.5s ease"
+    });
+
+    var developer = $("li.developer p");
+        $(developer).css({
+             opacity: 1,
+             left: 0,
+             transition: "all 0.5s ease"
+        });
+    
+    var mycvBtn = $(".mycv");
+        $(mycvBtn).css({
+            right: 0,
+            opacity: 1,
+            transition: "all 0.5s ease"
+        });
+
+    var hello = $(".hello p");
+        $(hello).css({
+            bottom: "-50px",
+            opacity: 1,
+            transition: "all 0.5s ease"
+        });
+  }
+    setTimeout(displayName, 1000);
+
+
+
+
 // =====================================================
 //    SCROLL EFFECT
 // =====================================================
-//   $("html, body").animate({
-//          scrollTop: $("#sticky-nav-start-point").offset().top - 50
-//   }, 500);
-
   var navLinks = $(".nav-links a");
       $(navLinks).click(function(e){
           e.preventDefault();
@@ -13,6 +61,10 @@ $(document).ready(function(){
         var dataScrollTop = parseInt($("#"+pageUrl).attr("data-scroll-top"));
         if(!dataScrollTop){
             dataScrollTop = 0;
+        }
+
+        if($(window).width() < 567){
+            dataScrollTop = dataScrollTop + 25;
         }
          $("html, body").animate({
              scrollTop: $("#"+pageUrl).offset().top - dataScrollTop
@@ -253,11 +305,41 @@ $.each(swipperContainer, function(index, current){
    
        
 
+// =====================================================
+//    SKILLS PROGRESS BAR EFFECT
+// =====================================================
+function progress_bar(){
+    var svgProgressBar = $(".skills-frame");
+    $.each(svgProgressBar, function(index, current){
+        var progressBar = $(this).find(".svg #bar");
+        var stroke = parseInt($(current).find(".percentage h1").html());
+           var strokeValues = (189 - (189 * stroke) / 100);
+            $(progressBar).css({
+                strokeDashoffset: strokeValues
+            });
+    });
+}
 
 
+var elementTop = $(window).scrollTop();
+var skillsContainer = $(".skills-container").offset().top;
+var inview = $(window).height();
+var difference = ((skillsContainer - elementTop) + 300);
 
+if(difference < inview){
+    progress_bar();
+}
 
+// progress bar onscroll effect
+// ============================
+$(window).scroll(function(){
+    var elementTop = $(this).scrollTop();
+    var difference = ((skillsContainer - elementTop) + 300);
 
+       if(difference < inview){
+           progress_bar();
+       }
+});
 
     // document ready end;
 });

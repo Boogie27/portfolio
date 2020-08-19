@@ -53,12 +53,13 @@ img.banner-image{
     width: 100%;
     height: 100%;
     filter: brightness(20%);
+    display: none;
 }
 img.banner-svg{
     position: absolute;
     left: 0px;
     width: 100%;
-    bottom: -1px;
+    bottom: -30px;
 }
 img.profile-image{
     width: 250px;
@@ -106,6 +107,31 @@ img.profile-image{
     font-weight: 300;
     text-decoration: none;
 }
+ul.name-info li{
+    position: relative;
+}
+.hello p, .my-name, .developer p, .mycv{
+    position: absolute;
+}
+.hello p{
+    bottom: 0px; 
+    opacity: 0;  
+}
+.mycv{
+    bottom: -150px;
+    right: -150px;
+    opacity: 0;
+}
+.my-name{
+    bottom: -250px;
+    opacity: 0;
+}
+.developer p{
+    bottom: -150px;
+    left: -250px;
+    opacity: 0;
+}
+
 @media only screen and (max-width: 992px){
 .banner ul.name-info{
     margin: 0px;
@@ -168,7 +194,7 @@ img.profile-image{
 
 @media only screen and (max-width: 398px){ 
 .banner ul.name-info li h1{
-    font-size: 200%;
+    font-size: 220%;
 }
 .banner{
     height: 450px;
@@ -327,6 +353,7 @@ img.profile-image{
 .about-body p, .query p{
    color: #555;
    font-size: 75%;
+   font-weight: 300;
 }
 .years-of-expirience{
     overflow: hidden;
@@ -507,6 +534,7 @@ li.google a{
 .specialty-body ul li{
    color: #555;
    font-size: 75%;
+   font-weight: 300;
    list-style: inside;
 }
 /* =============================================================== */
@@ -526,7 +554,7 @@ svg.svg circle{
     height: 100%;
     fill: none;
     stroke: #555;
-    stroke-width: 5px;
+    stroke-width: 7px;
     stroke-linecap: round;
     transform: translate(5px, 5px); 
     stroke-dasharray: 189;
@@ -535,30 +563,28 @@ svg.svg circle{
 }
 svg.svg circle{
     stroke-dashoffset: 0;
-    stroke: #ccc;
+    stroke: #fff;
 }
-svg.svg circle.two{
-    stroke-dashoffset: calc(189 - (189 * 90) / 100);
+svg.svg circle#bar{
+    stroke-dashoffset: calc(189 - (189 * 100) / 100);
+}
+svg.svg circle.html{
+    stroke-dashoffset: calc(189 - (189 * 100) / 100);
     stroke: #f6f03e;
 }
 svg.svg circle.css{
-    stroke-dashoffset: calc(189 - (189 * 90) / 100);
     stroke: #81f4cf;
 }
 svg.svg circle.js{
-    stroke-dashoffset: calc(189 - (189 * 75) / 100);
     stroke: #f28a64;
 }
 svg.svg circle.jquery{
-    stroke-dashoffset: calc(189 - (189 * 75) / 100);
     stroke: #54f043;
 }
 svg.svg circle.php{
-    stroke-dashoffset: calc(189 - (189 * 80) / 100);
     stroke: #8083f0;
 }
 svg.svg circle.laravel{
-    stroke-dashoffset: calc(189 - (189 * 50) / 100);
     stroke: #f263a6;
 }
 .skills-frame .percentage{
@@ -591,7 +617,7 @@ svg.svg circle.laravel{
 @media only screen and (max-width: 467px){
 .specialty-container{
     padding: 50px 0px;
-    background-color: #f1f1f1;
+    background-color: #ccc;
     border-bottom: 1px solid #ccc; 
     box-shadow: 0px 2px 2px 0px rgba(171, 170, 170, 0.27); 
 }
@@ -608,7 +634,7 @@ svg.svg circle.laravel{
    padding: 0px 50px;
 }
 .portfolio-header h2{
-    font-size: 70%;
+    font-size: 85%;
     color: #555;
     position: relative;
 }
@@ -652,6 +678,7 @@ svg.svg circle.laravel{
 }
 .description-body p, .description-body ul li{
     font-size: 75%;
+    font-weight: 300;
     padding-left: 20px;
     color: rgb(98, 98, 98);
 }
