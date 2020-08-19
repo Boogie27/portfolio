@@ -6,7 +6,7 @@ $(document).ready(function(){
 //          scrollTop: $("#sticky-nav-start-point").offset().top - 50
 //   }, 500);
 
-  var navLinks = $(".nav-links li a");
+  var navLinks = $(".nav-links a");
       $(navLinks).click(function(e){
           e.preventDefault();
          var pageUrl = $(this).attr("href").substring($(this).attr("href").lastIndexOf("#") + 1);
