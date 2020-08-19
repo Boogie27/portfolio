@@ -20,16 +20,16 @@
 
      
          <!-- BANNER SECTION -->
-        <section>
+        <section id="home" data-scroll-top="500">
            <div class="banner"><!-- banner start -->
                <img src="image/banner/banner_2.jpg" alt="banner_2" class="banner-image">
                <img src="svg/angle.svg" alt="banner_2" class="banner-svg" >
                <img src="image/profile-image/image.jpg" alt="image" class="profile-image" >
-               <ul class="name-info">
+               <ul class="name-info nav-links">
                    <li class="hello">Hello, i am </li>
                    <li><h1>Anonye Charles</h1></li>
                    <li class="developer">a full stack web developer</li>
-                   <li class="mycv"><a href="#">view portfolio</a></li>
+                   <li class="mycv"><a href="#myportfolio">view portfolio</a></li>
                </ul>
            </div><!-- banner end-->
         </section>
@@ -41,7 +41,7 @@
                     <div class="row">
                         <div class="col-md-2 col-sm-12 col-12">
                             <div class="logo">
-                               <a href="index.html"><img src="icons/make-call.png" alt=""></a>
+                               <a href="#home"><img src="icons/make-call.png" alt=""></a>
                                 <i class="fa fa-bars"></i>
                             </div> 
                         </div>
@@ -49,12 +49,12 @@
                             <div class="cancle-btn">
                                 <i class="fa fa-times"></i>
                             </div>
-                            <ul>
-                                <li><a href="#" class="active">my blog</a></li>
-                                <li><a href="#">Details</a></li>
-                                <li><a href="#">Expirience</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">About</a></li>
+                            <ul class="nav-links">
+                                <li><a href="#home" class="active">home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#myskills">Skills</a></li>
+                                <li><a href="#myportfolio">Expirience</a></li>
+                                <li><a href="#services">Services</a></li>
                             </ul>
                         </div>
                     </div>
@@ -66,7 +66,7 @@
 
         <!-- ABOUT SECTION -->
         <section id="sticky-nav-start-point" data-top="100">
-             <div class="about-container">
+             <div class="about-container" id="about" data-scroll-top="50">
                 <div class="container">
                     <div class="row">
                          <div class="col-md-6 col-sm-6 col-12">
@@ -98,7 +98,7 @@
                                     </div>
                                     <div class="col-md-6 col-sm-6 col-5 documentBtn">
                                         <div class="download-cv">
-                                            <li><a href="#"><i class="fa fa-arrow-down"></i>Download my cv</a></li>
+                                            <li><a href="https://resume.io/r/EsTtQncJE"><i class="fa fa-arrow-down"></i>Download my cv</a></li>
                                         </div>
                                     </div>
                                 </div>
@@ -134,15 +134,15 @@
 
 
         <!-- SPECIALTY SECTION -->
-        <section class="specialty-container">
+        <section class="specialty-container" id="services" data-scroll-top="80">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-12"><!-- start specialty column -->
                         <!-- specialty start -->
                         <div class="specialty">
                             <div class="about-header">
-                                <h4>Specialty <span></span></h4>
-                                <h1>What do i specialize on?</h1>
+                                <h4>services & Specialty <span></span></h4>
+                                <h1>my services & specialty?</h1>
                             </div>
                             <div class="specialty-body">
                                 <ul>
@@ -157,7 +157,7 @@
                     <!-- skills column start -->
                     <div class="col-lg-6 col-md-12">
                          <!-- skills start -->
-                        <div class="skills-container">
+                        <div class="skills-container" id="myskills" data-scroll-top="50">
                             <div class="about-header">
                                 <h4>Skills <span></span></h4>
                                 <h1>Want know my skills?</h1>
@@ -168,7 +168,7 @@
                                     <div class="col-lg-3 col-md-2 col-sm-3 col-4">
                                         <div class="skills-frame">
                                             <svg class="svg">
-                                                <circle cx="30" cy="30" r="30" class="one"></circle>
+                                                <circle cx="30" cy="30" r="30" class=""></circle>
                                                 <circle cx="30" cy="30" r="30" class="two" id="bar"></circle>
                                             </svg>
                                             <div class="percentage"><h1>90<span>%</span></h1></div>
@@ -178,8 +178,8 @@
                                     <div class="col-lg-3 col-md-2 col-sm-3 col-4">
                                         <div class="skills-frame">
                                             <svg class="svg">
-                                                <circle cx="30" cy="30" r="30" class="one"></circle>
-                                                <circle cx="30" cy="30" r="30" class="two" id="bar"></circle>
+                                                <circle cx="30" cy="30" r="30" class=""></circle>
+                                                <circle cx="30" cy="30" r="30" class="css" id="bar"></circle>
                                             </svg>
                                             <div class="percentage"><h1>80<span>%</span></h1></div>
                                             <div class="skill-name">CSS</div>
@@ -188,8 +188,8 @@
                                     <div class="col-lg-3 col-md-2 col-sm-3 col-4">
                                         <div class="skills-frame">
                                             <svg class="svg">
-                                                <circle cx="30" cy="30" r="30" class="one"></circle>
-                                                <circle cx="30" cy="30" r="30" class="two" id="bar"></circle>
+                                                <circle cx="30" cy="30" r="30" class=""></circle>
+                                                <circle cx="30" cy="30" r="30" class="js" id="bar"></circle>
                                             </svg>
                                             <div class="percentage"><h1>70<span>%</span></h1></div>
                                             <div class="skill-name">JAVASCRIPT</div>
@@ -198,8 +198,8 @@
                                     <div class="col-lg-3 col-md-2 col-sm-3 col-4">
                                         <div class="skills-frame">
                                             <svg class="svg">
-                                                <circle cx="30" cy="30" r="30" class="one"></circle>
-                                                <circle cx="30" cy="30" r="30" class="two" id="bar"></circle>
+                                                <circle cx="30" cy="30" r="30" class=""></circle>
+                                                <circle cx="30" cy="30" r="30" class="jquery" id="bar"></circle>
                                             </svg>
                                             <div class="percentage"><h1>70<span>%</span></h1></div>
                                             <div class="skill-name">JQUERY</div>
@@ -208,8 +208,8 @@
                                     <div class="col-lg-3 col-md-2 col-sm-3 col-4">
                                         <div class="skills-frame">
                                             <svg class="svg">
-                                                <circle cx="30" cy="30" r="30" class="one"></circle>
-                                                <circle cx="30" cy="30" r="30" class="two" id="bar"></circle>
+                                                <circle cx="30" cy="30" r="30" class=""></circle>
+                                                <circle cx="30" cy="30" r="30" class="php" id="bar"></circle>
                                             </svg>
                                             <div class="percentage"><h1>70<span>%</span></h1></div>
                                             <div class="skill-name">PHP</div>
@@ -218,8 +218,8 @@
                                     <div class="col-lg-3 col-md-2 col-sm-3 col-4">
                                         <div class="skills-frame">
                                             <svg class="svg">
-                                                <circle cx="30" cy="30" r="30" class="one"></circle>
-                                                <circle cx="30" cy="30" r="30" class="two" id="bar"></circle>
+                                                <circle cx="30" cy="30" r="30" class=""></circle>
+                                                <circle cx="30" cy="30" r="30" class="laravel" id="bar"></circle>
                                             </svg>
                                             <div class="percentage"><h1>70<span>%</span></h1></div>
                                             <div class="skill-name">LARAVEL</div>
@@ -240,7 +240,7 @@
 
         <!-- PORTFOLIO SECTION-->
         <section>
-            <div class="portfolio">
+            <div class="portfolio" id="myportfolio" data-scroll-top="50">
                 <div class="portfolio-container-header">
                         <div class="about-header">
                             <h4>Portfolio <span></span></h4>
@@ -465,12 +465,12 @@
                                     <div class="about-header">
                                         <h4>Links <span></span></h4>
                                     </div>
-                                    <ul>
-                                        <li><a href="#">my blog</a></li>
-                                        <li><a href="#">details</a></li>
-                                        <li><a href="#">expirirence</a></li>
-                                        <li><a href="#">services</a></li>
-                                        <li><a href="#">about</a></li>
+                                    <ul class="nav-links">
+                                        <li><a href="#home" class="active">home</a></li>
+                                        <li><a href="#about">About</a></li>
+                                        <li><a href="#myskills">Skills</a></li>
+                                        <li><a href="#myportfolio">Expirience</a></li>
+                                        <li><a href="#services">Services</a></li>
                                     </ul>
                                 </div>
                             </div> <!-- footer alright end-->
