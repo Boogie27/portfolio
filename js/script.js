@@ -1,5 +1,15 @@
 $(document).ready(function(){
 
+// ====================================================
+//  PRELOADER EFFECT
+// ====================================================
+    function remove_preloader(){
+        var preloader = $(".light-skin");
+        $(preloader).hide();
+        displayName();
+    }
+    setTimeout(remove_preloader , 1000);
+
 // =====================================================
 //    DYNAMIC BANNER EFFECT
 // =====================================================
@@ -52,7 +62,7 @@ $(document).ready(function(){
             transition: "all 0.5s ease"
         });
   }
-    setTimeout(displayName, 1000);
+    // setTimeout(displayName, 1000);
 
 
 
@@ -273,6 +283,9 @@ class Swipper{
                 transition: "all 0.3s ease"
             });
          }
+        //  switch caurose active
+         $(this.caurosel).children().removeClass("active")
+         $( $(this.caurosel).children()[this.counter]).addClass("active")
        
         this.isDown = false;
         this.isMoving = false;
