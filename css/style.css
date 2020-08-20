@@ -22,22 +22,6 @@ li{
     list-style: none;
     color: #fff;
 }
-/* =============================================================== */
-/*                 PRELOADER AND DARK SKIN  SECTION                */
-/* =============================================================== */
-.dark-skin{
-    /* position: fixed;
-    width: 100%;
-    height: 100vh;
-    opacity: 0.8;
-    top: 0px;
-    z-index: 100;
-    background-color: black; */
-}
-.preloader{
- 
-}
-
 
 /* =============================================================== */
 /*                 BANNER SECTION                              */
@@ -68,7 +52,8 @@ img.profile-image{
     border: 5px solid #fff;
     position: absolute;
     left: 100px;
-    bottom: -80px;
+    bottom: -110px;
+    box-shadow: 0px 5px 2px 0px rgba(91, 91, 91, 0.27);
 }
 .banner ul.name-info{
     position: absolute;
@@ -135,8 +120,11 @@ ul.name-info li{
 @media only screen and (max-width: 992px){
 .banner ul.name-info{
     margin: 0px;
-    right: 100px;
+    right: 200px;
 } 
+.banner ul.name-info li.mycv:hover{
+    transform: none;
+}
 }
 @media only screen and (max-width: 867px){
 .banner ul.name-info{
@@ -146,7 +134,7 @@ ul.name-info li{
 img.profile-image{
     width: 200px;
     height: 200px;
-    bottom: -60px;
+    bottom: -80px;
 }
 }
 
@@ -158,7 +146,7 @@ img.profile-image{
 img.profile-image{
     width: 150px;
     height: 150px;
-    bottom: -35px;
+    bottom: -65px;
 }
 }
 
@@ -187,7 +175,7 @@ img.profile-image{
 img.profile-image{
     width: 125px;
     height: 125px;
-    bottom: -45px;
+    bottom: -60px;
     left: 50px;
 }
 }
@@ -459,6 +447,12 @@ li.google a{
 .my-cv-container{
     width: 90%;
     margin-left: 5%;
+ }
+ li.google:hover{
+    transform: none;
+}
+.download-cv li:hover, .view-cv li:hover{
+    transform: none;
  }
 }
 
@@ -770,6 +764,9 @@ svg.svg circle{
 .caurosel i.fa-circle.active{
     color: orange;
 }
+.Bbutton li:hover, .Rbutton li:hover{
+    transform: none;
+ }
 }
 @media only screen and (max-width: 467px){
 .portfolio-body{
@@ -789,6 +786,23 @@ svg.svg circle{
     padding-left: 0px;
 }
 }
+/* ================================================================ */
+/*    SCROLL UP SECTION                                             */
+/* ================================================================ */
+.angle-up-container{
+    text-align: right;
+    padding: 5px 0px;
+    position: relative;
+}
+.angle-up-container i.fa-angle-up{
+    background-color: orangered;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    box-shadow: 3px 2px 2px 0px rgba(65, 65, 65, 0.27); 
+    cursor: pointer
+}
+
    /* ================================================================ */
  /*               GET INTOUCH SECTION                                */
  /* ================================================================ */

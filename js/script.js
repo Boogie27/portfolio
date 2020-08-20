@@ -1,8 +1,11 @@
 $(document).ready(function(){
 
+// =====================================================
+//    DYNAMIC BANNER EFFECT
+// =====================================================
     var imageCounter = 0;
    function dynamic_banner(){
-    var bannerImage = $("img.banner-image");
+         var bannerImage = $("img.banner-image");
         for(var i = 0; i < bannerImage.length; i++){
               $($(bannerImage)[i]).hide();
         }
@@ -14,6 +17,9 @@ $(document).ready(function(){
         setTimeout(dynamic_banner, 10500);
    }
    dynamic_banner();
+
+
+
 // =====================================================
 //    BANNER FADE IN EFFECT
 // =====================================================
@@ -340,6 +346,23 @@ $(window).scroll(function(){
            progress_bar();
        }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // document ready end;
 });
