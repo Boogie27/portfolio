@@ -27,13 +27,11 @@ li{
 /* =============================================================== */
 .preloader, .preloader-container{
     width: 50px;
+    margin-left: 47%;
     height: 50px;
     border: 3px solid rgb(252, 129, 63);
     position: absolute;
-    right: 50%;
-    top: 50%;
-    left: 45%;
-    transform: translate(-50%, -50%);
+    top: 300px;
     z-index: 100;
     border-radius: 50%;
     border-right: 3px solid transparent;
@@ -55,11 +53,10 @@ li{
     position: absolute;
     font-size: 85%;
     color:  rgb(252, 129, 63);
-    right: 50%;
-    top: 60%;
-    left: 46%;
     z-index: 100;
-    transform: translate(-50%, -50%);
+    top: 350px;
+    display: inline-block;
+    margin-left: 46%;
 }
 .light-skin{
     width: 100%;
@@ -67,6 +64,24 @@ li{
     z-index: 120;
     background-color: #fff;
     position: fixed;
+}
+@media only screen and (max-width: 567px){
+.preloader, .preloader-container{
+   margin-left: 45%;
+   top: 270px;
+}
+.loading{
+    top: 320px;
+    margin-left: 43%;
+}
+}
+@media only screen and (max-width: 398px){
+.preloader, .preloader-container{
+    margin-left: 43%;
+}
+.loading{
+    margin-left: 41%;
+}
 }
 
 /* =============================================================== */
