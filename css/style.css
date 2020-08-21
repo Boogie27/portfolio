@@ -78,8 +78,10 @@ li{
 @media only screen and (max-width: 398px){
 .preloader, .preloader-container{
     margin-left: 43%;
+    top: 250px;
 }
 .loading{
+    top: 300px;
     margin-left: 41%;
 }
 }
@@ -838,6 +840,11 @@ svg.svg circle{
     transform: none;
  }
 }
+p a.phpCode{
+   color: rgb(252, 116, 67);
+   font-size: 80%;
+   border-bottom: 1px solid rgb(252, 116, 67);;
+}
 @media only screen and (max-width: 467px){
 .portfolio-body{
     padding: 20px 0px;
@@ -846,7 +853,7 @@ svg.svg circle{
     padding: 0px 10px;
 }
 .description-body{
-    padding: 0px 10px;
+    padding: 0px 20px;
 }
 .portfolio-image{
     padding-left: 0px;
