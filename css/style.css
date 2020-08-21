@@ -872,22 +872,6 @@ p a.phpCode{
     padding-left: 0px;
 }
 }
-/* ================================================================ */
-/*    SCROLL UP SECTION                                             */
-/* ================================================================ */
-.angle-up-container{
-    text-align: right;
-    padding: 5px 0px;
-    position: relative;
-}
-.angle-up-container i.fa-angle-up{
-    background-color: rgb(251, 101, 46);
-    color: #fff;
-    padding: 11px 15px;
-    border-radius: 50%;
-    box-shadow: 3px 2px 2px 0px rgba(65, 65, 65, 0.27); 
-    cursor: pointer
-}
 
    /* ================================================================ */
  /*               GET INTOUCH SECTION                                */
@@ -1006,3 +990,26 @@ p a.phpCode{
     }
  }
  
+ /* ================================================================ */
+/*    SCROLL UP SECTION                                             */
+/* ================================================================ */
+.angle-up-container{
+    position: relative;
+    width: 100%;
+    z-index: 120;
+}
+.angle-up-container a{
+    display: none;
+}
+.angle-up-container a i.fa-angle-up{
+   z-index: 100;
+   position: fixed;
+   right: 20px;
+   bottom: 45px;
+   background-color: rgb(251, 101, 46);
+   color: #fff;
+   padding: 11px 15px;
+   border-radius: 50%;
+   box-shadow: 3px 2px 2px 0px rgba(65, 65, 65, 0.27); 
+   cursor: pointer;
+}

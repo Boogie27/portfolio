@@ -8,7 +8,7 @@ $(document).ready(function(){
         $(preloader).hide();
         displayName();
     }
-    setTimeout(remove_preloader , 1000);
+    setTimeout(remove_preloader , 00);
 
 // =====================================================
 //    DYNAMIC BANNER EFFECT
@@ -65,6 +65,33 @@ $(document).ready(function(){
     // setTimeout(displayName, 1000);
 
 
+// =====================================================
+//    SCROLL TO TOP EFFECT
+// =====================================================
+var scrollTop = $(".angle-up-container");
+ 
+var elementTop = $(window).scrollTop();
+var footerContainer = $(scrollTop).offset().top;
+var inview = $(window).height();
+var difference = ((footerContainer - elementTop));
+
+if(difference < inview){
+    $(scrollTop).children().fadeIn();
+}else{
+    $(scrollTop).children().fadeOut();
+}
+
+// angle up onscroll effect
+// ============================
+$(window).scroll(function(){
+    var elementTop = $(this).scrollTop();
+    var difference = ((footerContainer - elementTop));
+       if(difference < inview){
+           $(scrollTop).children().fadeIn();
+       }else{
+           $(scrollTop).children().fadeOut();
+       }
+});
 
 
 // =====================================================
