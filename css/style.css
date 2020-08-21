@@ -920,9 +920,15 @@ p a.phpCode{
 }
 .footer-body li.google img{
     border-radius: 50%;
+    height: 20px;
+    width: 20px;
 }
 .footer-body li.google{
     margin: 10px 0px 0px 0px;
+}
+.footer-body li.google a.whatsapp{
+    color: #ccc;
+    font-size: 55%;
 }
 
   /* ======================================================= */
