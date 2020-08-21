@@ -490,6 +490,13 @@ li.google a{
      height: 100%;
      box-shadow: 2px 2px 3px 2px rgba(72, 72, 72, 0.421);
  }
+ .redirect-arrow-back{
+     padding-top: 20px;
+ }
+ .redirect-arrow-back a i.fa-arrow-left{
+     font-size: 80%;
+     color: #fff;
+ }
  @media only screen and (max-width: 1125px){
 .my-cv-container{
     width: 80%;
@@ -798,22 +805,24 @@ svg.svg circle{
     width: 100%;
 }
 .portfolio-container{
-    height: 220px;
+    height: 270px;
     position: relative;
 }
 .portfolio-frame{
     position: absolute;
     display: flex;
+    height: 100%;
 }
 .portfolio-image{
     float: none;
     width: 450px;
+    height: 100%;
     padding-left: 10px;
 }
 .caurosel{
     display: block;
     position: relative;
-    bottom: -190px;
+    bottom: -230px;
     text-align: center;
     height: 0
 }
@@ -831,12 +840,20 @@ svg.svg circle{
 }
 @media only screen and (max-width: 467px){
 .portfolio-body{
-    box-shadow: 0px 2px 2px 0px rgba(171, 170, 170, 0.27); 
-    padding: 30px 20px;
+    padding: 20px 0px;
+}
+.portfolio-header{
+    padding: 0px 10px;
+}
+.description-body{
+    padding: 0px 10px;
+}
+.portfolio-image{
+    padding-left: 0px;
 }
 .redirectBTN{
     min-width: 100%;
-    padding: 0px;
+    padding: 0px 20px;
     margin-top: 10px;
 }
 .Bbutton li , .Rbutton li{

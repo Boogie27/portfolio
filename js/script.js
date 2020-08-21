@@ -8,7 +8,7 @@ $(document).ready(function(){
         $(preloader).hide();
         displayName();
     }
-    setTimeout(remove_preloader , 1000);
+    setTimeout(remove_preloader , 10);
 
 // =====================================================
 //    DYNAMIC BANNER EFFECT
