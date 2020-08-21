@@ -56,7 +56,7 @@ li{
     z-index: 100;
     top: 350px;
     display: inline-block;
-    margin-left: 46%;
+    margin-left: 46.5%;
 }
 .light-skin{
     width: 100%;
@@ -449,12 +449,17 @@ li.google:hover{
 }
 li.google img{
     width: 30px;
+    border-radius: 50%;
 }
 li.google a{
     text-decoration: none;
     color: rgb(249, 94, 38);
     font-size: 65%;
     border-bottom: 1px solid  rgb(249, 94, 38);
+}
+li.google a.whatsapp{
+    color: #555;
+    border-bottom: 1px solid  transparent;
 }
 .view-cv li{
    background-color: rgb(255, 120, 70);
