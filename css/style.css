@@ -731,10 +731,11 @@ svg.svg circle{
     width: 100%;
     height: inherit;
     overflow: hidden;
+    height: 250px;
 }
 .portfolio-image{
     width: 33.33%;
-    height: 200px;
+    height: 250px;
     margin-left: 0%;
     float: left;
     position: relative;
