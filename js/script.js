@@ -305,9 +305,9 @@ class Swipper{
      //  touch start 
      touchEnd(){
          if(this.isMoving){
-            if(this.change <= (-this.itemsWidth / 3)){
+            if(this.change <= (-this.itemsWidth / 4)){
             this.counter++;
-            }else if(this.change > (this.itemsWidth/3)){
+            }else if(this.change > (this.itemsWidth / 4)){
                 this.counter--;
             }
             if(this.counter < 0){
