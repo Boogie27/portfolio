@@ -185,6 +185,7 @@ class Swipper{
         var action = this;
         this.isDown = false;
         this.isMoving = false;
+        this.scrolling = false;
         this.counter = 0;
         this.change = 0;
         this.itemsWidth = 0;
@@ -208,6 +209,10 @@ class Swipper{
             action.touchEnd();   // touch end function
         });
         this.cauroselBtn();// function that handles caurosel click action;
+        
+        $(window).on("scroll", function(){
+            action.scrollItems() //  wiindow scrollling
+        })
     
      }
 
@@ -265,6 +270,12 @@ class Swipper{
          $($(this.caurosel).children()[0]).addClass("active");
      }
 
+    //  wiindow scrollling
+     scrollItems(){
+         this.scrolling = true;
+     }
+
+
     //  touch start 
     touchStart(){
        this.isDown = true;
@@ -279,13 +290,15 @@ class Swipper{
      //  touch start 
      touchMove(){
        if(this.isDown){
-           var isMoving = event.touches[0].clientX;
-           this.change = isMoving - this.initialPosition;
-
-           $(this.swipperFrame).css({
-               "transform": "translateX("+(this.change + this.transformMatrixValue)+"px)"
-           });
-          this.isMoving = true;
+           if(!this.scrolling){
+                var isMoving = event.touches[0].clientX;
+                this.change = isMoving - this.initialPosition;
+    
+                $(this.swipperFrame).css({
+                    "transform": "translateX("+(this.change + this.transformMatrixValue)+"px)"
+                });
+                this.isMoving = true;
+           }
        }
     }
 
@@ -316,6 +329,7 @@ class Swipper{
        
         this.isDown = false;
         this.isMoving = false;
+        this.scrolling = false;
     }
 
     // function that handles caurosel click action;
