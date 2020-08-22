@@ -28,6 +28,38 @@ $(document).ready(function(){
    }
    dynamic_banner();
 
+// =====================================================
+//    PROFILE IMAGE FRANSFORM EFFECT
+// =====================================================
+var profileImage = $(".profile-image");
+var inview = $(window).height();
+var profileImageTop = $(profileImage).offset().top;
+var elementTop = $(window).scrollTop();
+var difference = ((profileImageTop + 100));
+if(elementTop > difference){
+    $(profileImage).css({
+        transform: "scale(0.6)"
+    })
+}else{
+    $(profileImage).css({
+        transform: "none"
+    }) 
+}
+// onscroll profile image transform effect
+// =======================================
+$(window).scroll(function(){
+    var elementTop = $(this).scrollTop();
+    var difference = ((profileImageTop + 100));
+    if(elementTop > difference){
+        $(profileImage).css({
+            transform: "scale(0.6)"
+        })
+    }else{
+        $(profileImage).css({
+            transform: "none"
+        }) 
+    }
+});
 
 
 // =====================================================
