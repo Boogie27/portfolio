@@ -382,15 +382,13 @@ img.profile-image{
 /*                 ABOUT  SECTION                              */
 /* =============================================================== */
 .about-container{
-   width: 80%;
-   margin-left: 10%;
    padding: 50px 0px 80px 0px;
 }
 .about{
     padding-bottom: 20px;
 }
 .about-header h4{
-    color: rgb(249, 94, 38);
+    color: #555;
     text-transform: uppercase;
     font-size: 60%;
     font-weight: bold;
@@ -401,17 +399,17 @@ img.profile-image{
     padding: 0px 50px;
     margin-left: 10px;
     top: 7px;
-    border-bottom: 1px solid rgb(249, 94, 38);
+    border-bottom: 1px solid #555;
 }
 .about-header h1{
     color: #555;
     text-transform: uppercase;
     font-size: 120%;
-    font-weight: 600;
+    font-weight: 300;
 }
 .about-body p, .query p{
    color: #555;
-   font-size: 75%;
+   font-size: 95%;
    font-weight: 300;
 }
 .years-of-expirience{
@@ -602,6 +600,9 @@ li.google a.whatsapp{
  /* =============================================================== */
 /*                 SECIALTY  SECTION                              */
 /* =============================================================== */
+.specialty-container{
+    background-color: #333;
+}
 .specialty{
    padding-bottom: 50px;
 }
@@ -611,101 +612,77 @@ li.google a.whatsapp{
    font-weight: 300;
    list-style: inside;
 }
-/* =============================================================== */
-/*                 SKILLS  SECTION                              */
-/* =============================================================== */
-.skills-frame{
-    position: relative;
-    height: 100px;
+
+.testimonial{
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)) , url(../image/banner/banner_2.jpeg);
+    background-size: cover;
+    color: #fff;
+    font-weight: 300;
+    background-attachment: fixed;
+    margin-top: 60px;
+    padding: 70px 0px;
 }
-svg.svg{
-    width: 70px;
-    height: 70px;
-    position: relative;
+.testimonial-head{
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 50px;
 }
-svg.svg circle{
-    width: 100%;
-    height: 100%;
-    fill: none;
-    stroke: #555;
-    stroke-width: 7px;
-    stroke-linecap: round;
-    transform: translate(5px, 5px); 
-    stroke-dasharray: 189;
-    stroke-dashoffset: 189;
-    transition:  stroke-dashoffset 1s linear;
-}
-svg.svg circle{
-    stroke-dashoffset: 0;
-    stroke: #ccc;
-}
-svg.svg circle#bar{
-    stroke-dashoffset: calc(189 - (189 * 100) / 100);
-}
-svg.svg circle.html{
-    stroke-dashoffset: calc(189 - (189 * 100) / 100);
-    stroke: #f6f03e;
-}
-svg.svg circle.css{
-    stroke: #81f4cf;
-}
-svg.svg circle.js{
-    stroke: #f28a64;
-}
-svg.svg circle.jquery{
-    stroke: #54f043;
-}
-svg.svg circle.php{
-    stroke: #8083f0;
-}
-svg.svg circle.laravel{
-    stroke: #f263a6;
-}
-.skills-frame .percentage{
-    position:absolute;
-    justify-content: center;
-    color: #ccc;
-    width: 70px;
-    height: 70px;
+
+.testimonial-head h2{
     text-align: center;
-    top: 0px;
-}
-.skills-frame .percentage h1{
-    font-size: 100%;
-    position: relative;
-    top: 23px;
-    color: #555;
-}
-.skills-frame .percentage h1 span{
-    font-size: 50%;
-}
-.skill-name{
-    width: 70px;
-    height: 70px;
-    text-align: center;
-    color: #555;
-    font-weight: 600;
-    font-size: 60%;
+    font-weight: 300;
     text-transform: uppercase;
+    font-size: 180%;
 }
-@media only screen and (max-width: 467px){
-.specialty-container{
-    padding: 50px 0px;
-    background-color: #ccc;
-    border-bottom: 1px solid #ccc; 
-    box-shadow: 0px 2px 2px 0px rgba(171, 170, 170, 0.27); 
+
+.testimonial-head h2:after{
+    content: "";
+    height: 2px;
+    width: 150px;
+    background-color: rgb(248, 122, 76);
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
 }
-svg.svg circle{
-    stroke: #fff;
+ul.specialties li{
+    list-style: inside;
+    font-size: 90%;
+    font-style: italic;
 }
+.skills-header{
+    position: relative;
 }
+.skills-header h2{
+    margin: 0px;
+    font-size: 150%;
+    font-weight: 400;
+    text-align: center;
+}
+.skills-header h2:before{
+    content: "\201C";
+    font-size: 270%;
+    display: block;
+    position: absolute;
+    top: -25px;
+    left: 180px;
+  }
+.skills-body{
+    font-size: 90%;
+    font-style: italic; 
+}
+@media only screen and (max-width: 767px){
+    .skills-container{
+        margin-top: 30px;
+    }   
+    }
+
 
 
 /* =============================================================== */
 /*                 PORTFOLIO SECTION                              */
 /* =============================================================== */
 .portfolio{
-    padding: 50px 0px;
+    padding: 100px 0px;
 }
 .portfolio-container-header{
    padding: 0px 50px;
@@ -714,10 +691,6 @@ svg.svg circle{
     font-size: 85%;
     color: #555;
     position: relative;
-}
-.portfolio-header p{
-    font-size: 60%;
-    color: #555;
 }
 .portfolio-header i.fa-circle{
     font-size: 70%;
@@ -728,7 +701,7 @@ svg.svg circle{
     padding: 10px 50px;
 }
 .portfolio-header h2 i{
-   color: rgb(249, 94, 38);
+   color: #ccc;
    font-size: 120%;
 }
 .portfolio-container{
@@ -755,7 +728,7 @@ svg.svg circle{
     padding: 20px 0px;
 }
 .description-body p, .description-body ul li{
-    font-size: 75%;
+    font-size: 95%;
     font-weight: 300;
     padding-left: 20px;
     color: rgb(98, 98, 98);
@@ -907,7 +880,7 @@ p a.phpCode{
 }
 .social-link a img{
     width: 30px;
-    background-color: #fff;
+    border-radius: 50%;
 }
 .footer-body li.phone{
     color: #ccc;
@@ -916,8 +889,8 @@ p a.phpCode{
 }
 .footer-body li.google img{
     border-radius: 50%;
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
 }
 .footer-body li.google{
     margin: 10px 0px 0px 0px;
