@@ -29,7 +29,7 @@ $(document).ready(function(){
    dynamic_banner();
 
 // =====================================================
-//    PROFILE IMAGE FRANSFORM EFFECT
+//    PROFILE IMAGE TRANSFORM EFFECT
 // =====================================================
 var profileImage = $(".profile-image");
 var inview = $(window).height();
