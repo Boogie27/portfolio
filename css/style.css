@@ -432,7 +432,7 @@ img.profile-image{
 }
 .query li.phone{
     color: #555;
-    font-size: 60%;
+    font-size: 80%;
 }
 .query li.phone i{
    margin-right: 5px;
@@ -453,7 +453,7 @@ li.google img{
 li.google a{
     text-decoration: none;
     color:   #555;
-    font-size: 65%;
+    font-size: 80%;
 }
 li.google a.whatsapp{
     color: #555;
@@ -852,7 +852,7 @@ p a.phpCode{
 }
 .footer-body .about-header p{
     color: #ccc;
-    font-size: 70%;
+    font-size: 80%;
     font-weight: 300;
     width: 80%;
     line-height: 15px;
@@ -863,7 +863,7 @@ p a.phpCode{
 }
 .footer-body li.phone{
     color: #ccc;
-    font-size: 50%;
+    font-size: 70%;
     letter-spacing: 2px;
 }
 .footer-body li.google img{
@@ -874,9 +874,9 @@ p a.phpCode{
 .footer-body li.google{
     margin: 10px 0px 0px 0px;
 }
-.footer-body li.google a.whatsapp{
+.footer-body li.google a{
     color: #ccc;
-    font-size: 55%;
+    font-size: 70%;
 }
 
   /* ======================================================= */
