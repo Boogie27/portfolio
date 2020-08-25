@@ -598,7 +598,7 @@ li.google a.whatsapp{
 }
 }
  /* =============================================================== */
-/*                 SECIALTY  SECTION                              */
+/*                 SECIALTY & SKILLS  SECTION                              */
 /* =============================================================== */
 .specialty{
     background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)) , url(../image/banner/banner_2.jpeg);
@@ -644,6 +644,7 @@ ul.specialties li{
     font-size: 150%;
     font-weight: 400;
     text-align: center;
+    padding: 10px 0px;
 }
 .skills-body{
     font-size: 90%;
